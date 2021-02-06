@@ -21,7 +21,6 @@ const showTitles = (e) => {
   function loadings() {
     ul.textContent = "";
     titles.forEach((title) => ul.appendChild(title.parentElement));
-    input.value = "";
     loading.classList.remove("on");
   }
   setTimeout(loadings, 1600);

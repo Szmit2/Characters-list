@@ -89,7 +89,6 @@ button:hover {
 input {
   outline: none;
   border: none;
-  border-bottom: 1px solid black;
   padding: 10px;
   font-size: 20px;
   margin-bottom: 10px;
@@ -132,6 +131,8 @@ input {
   margin: 10px 0;
   cursor: pointer;
   transition: 0.4s;
+  display: flex;
+  align-items: center;
 }
 
 .character:nth-child(odd) {
@@ -155,6 +156,12 @@ input {
 .character h2 {
   font-size: 18px;
   letter-spacing: 1px;
+}
+.character img {
+  width: 80px;
+  margin-right: 10px;
+  border-radius: 30%;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.431));
 }
 .logo {
   width: 150px;
