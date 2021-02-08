@@ -39,3 +39,26 @@ const reset = (e) => {
 button1.addEventListener("click", showTitles);
 button2.addEventListener("click", reset);
 input.addEventListener("input", search);
+
+// Show on scroll
+$(window).on("scroll", function () {
+  if ($(window).scrollTop() > 100) {
+    $(".strzalka").addClass("active");
+  } else {
+    $(".strzalka").removeClass("active");
+  }
+});
+
+// SCROLL
+$(".link1 , .link2 , .link, .link3").on("click", function () {
+  const goToSection = "#" + $(this).attr("class");
+  $("body, html").animate(
+    {
+      scrollTop: $(goToSection).offset().top,
+    },
+    1000
+  );
+  divburger.classList.remove("on");
+  navmobile.classList.remove("on");
+  kontakt.classList.remove("active");
+});
