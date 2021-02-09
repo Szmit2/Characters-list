@@ -1,3 +1,4 @@
+// Selectors
 const input = document.querySelector("input");
 const h2 = document.querySelectorAll("h2");
 const characters = document.querySelectorAll(".character");
@@ -14,6 +15,8 @@ const search = (e) => {
     title.textContent.toLowerCase().includes(searchH2)
   );
 };
+
+// Functions
 const showTitles = (e) => {
   e.preventDefault();
   if (input.value === "") return;
@@ -24,10 +27,8 @@ const showTitles = (e) => {
     loading.classList.remove("on");
   }
   setTimeout(loadings, 1600);
-  // ul.textContent = "";
-  // titles.forEach((title) => ul.appendChild(title.parentElement));
-  // input.value = "";
 };
+
 const reset = (e) => {
   e.preventDefault();
   ul.textContent = "";
@@ -36,6 +37,8 @@ const reset = (e) => {
   input.value = "";
   titles = [...h2];
 };
+
+// Evenet Listeners
 button1.addEventListener("click", showTitles);
 button2.addEventListener("click", reset);
 input.addEventListener("input", search);
@@ -50,7 +53,7 @@ $(window).on("scroll", function () {
 });
 
 // SCROLL
-$(".link1 , .link2 , .link, .link3").on("click", function () {
+$(".link").on("click", function () {
   const goToSection = "#" + $(this).attr("class");
   $("body, html").animate(
     {

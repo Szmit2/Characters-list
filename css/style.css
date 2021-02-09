@@ -125,6 +125,7 @@ input {
   flex-direction: column;
   animation: ulShow 1.2s both;
 }
+
 .character {
   padding: 25px 15px;
   border-radius: 20px;
