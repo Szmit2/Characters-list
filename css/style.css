@@ -59,6 +59,13 @@ a {
 h2 {
   color: #fff;
 }
+h1 {
+  color: #fff;
+  text-align: center;
+  font-family: "Sriracha", cursive;
+  letter-spacing: 2px;
+  filter: drop-shadow(2px 2px 10px black);
+}
 p {
   margin: 0.5rem 0;
   color: #fff;
@@ -293,6 +300,10 @@ i.strzalka.active {
   }
 }
 @media (min-width: 730px) {
+  h1 {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
   .one-star {
     top: 5%;
     right: 25%;
