@@ -137,10 +137,10 @@ input {
   padding: 25px 15px;
   border-radius: 20px;
   margin: 10px 0;
-  cursor: pointer;
   transition: 0.4s;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .character:nth-child(odd) {
@@ -282,6 +282,17 @@ i.strzalka {
 i.strzalka.active {
   opacity: 1;
 }
+.external {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  filter: drop-shadow(0 0 2px black);
+}
+.external:hover {
+  transform: scale(1.1);
+}
 @media (min-width: 500px) {
   form {
     display: flex;
@@ -351,6 +362,9 @@ i.strzalka.active {
   i.strzalka {
     bottom: 40px;
     right: 5%;
+  }
+  .external {
+    font-size: 22px;
   }
 }
 @keyframes fadeInLeftBig {

@@ -6,7 +6,6 @@ const ul = document.querySelector("ul");
 const button1 = document.querySelector(".search");
 const button2 = document.querySelector(".reset");
 const loading = document.querySelector(".loading");
-const loadingGoku = document.querySelector(".loading img");
 let titles;
 const search = (e) => {
   const searchH2 = e.target.value.toLowerCase();
