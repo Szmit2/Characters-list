@@ -2,11 +2,14 @@
 const input = document.querySelector("input");
 const h2 = document.querySelectorAll("h2");
 const characters = document.querySelectorAll(".character");
-const ul = document.querySelector("ul");
+const ul = document.querySelector("section.characters");
 const button1 = document.querySelector(".search");
 const button2 = document.querySelector(".reset");
 const loading = document.querySelector(".loading");
 let titles;
+
+// Functions
+// Search input value
 const search = (e) => {
   const searchH2 = e.target.value.toLowerCase();
   titles = [...h2];
@@ -14,8 +17,7 @@ const search = (e) => {
     title.textContent.toLowerCase().includes(searchH2)
   );
 };
-
-// Functions
+// Show searching result
 const showTitles = (e) => {
   e.preventDefault();
   if (input.value === "") return;
@@ -27,7 +29,7 @@ const showTitles = (e) => {
   }
   setTimeout(loadings, 1600);
 };
-
+// Reset to default list
 const reset = (e) => {
   e.preventDefault();
   ul.textContent = "";
@@ -42,7 +44,7 @@ button1.addEventListener("click", showTitles);
 button2.addEventListener("click", reset);
 input.addEventListener("input", search);
 
-// Show on scroll
+// Show arrow to top on scroll
 $(window).on("scroll", function () {
   if ($(window).scrollTop() > 100) {
     $(".strzalka").addClass("active");
@@ -51,7 +53,7 @@ $(window).on("scroll", function () {
   }
 });
 
-// SCROLL
+// SCROLL to top
 $(".link").on("click", function () {
   const goToSection = "#" + $(this).attr("class");
   $("body, html").animate(

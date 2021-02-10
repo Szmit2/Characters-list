@@ -276,7 +276,7 @@ i.strzalka {
   transition: 0.4s;
   padding: 10px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.527);
+  background-color: rgba(0, 0, 0, 0.76);
 }
 
 i.strzalka.active {
