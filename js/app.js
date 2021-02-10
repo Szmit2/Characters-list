@@ -60,7 +60,4 @@ $(".link").on("click", function () {
     },
     1000
   );
-  divburger.classList.remove("on");
-  navmobile.classList.remove("on");
-  kontakt.classList.remove("active");
 });
